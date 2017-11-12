@@ -17,11 +17,25 @@ public class Locadora
 		{
 			if(socio.getCpf().equals(cpf))
 			{
-				System.out.println("Sócio " + socio + " encontrado!");
+				System.out.print("\nSócio encontrado..." + "\n" + socio);
 				return socio;
 			}
 		}
-		System.out.println("Sócio não cadastrado...");
+		System.out.println("\nSócio não cadastrado...\n" + "\n");
+		return null;
+	}
+	
+	public Socio pesquisaSocio(String nome)
+	{
+		for(Socio socio : listaSocios)
+		{
+			if(socio.getCpf().equals(nome))
+			{
+				System.out.print("\nSócio encontrado..." + "\n" + socio);
+				return socio;
+			}
+		}
+		System.out.println("\nSócio não cadastrado...\n"  + "\n");
 		return null;
 	}
 	
@@ -33,13 +47,13 @@ public class Locadora
 	public void atualizarEnderecoSocio(Socio s, String endereco)
 	{
 		s.setEndereco(endereco);
-	}
+	}*/
 	
 	
 	public void cadastrarFilme(Filme f)
 	{
 		listaFilmes.add(f);
-	}*/
+	}
 	
 	public Filme buscarFilme(String tituloFilme)
 	{
@@ -47,12 +61,12 @@ public class Locadora
 		{
 			if(filme.getTituloFilme().equals(tituloFilme))
 			{
-				System.out.println("Filme " + filme + " encontrado!");
-				System.out.println("Cópias disponíveis: " + filme.getQtdCopias());
+				System.out.print("\nFilme encontrado..." + "\n" + filme);
+				System.out.println("\nCópias disponíveis: " + filme.getQtdCopias() + "\n");
 				return filme;
 			}
 		}
-		System.out.println("Filme não consta na lista...");
+		System.out.println("\nFilme não consta na lista...\n" + "\n");
 		return null;
 	}
 }

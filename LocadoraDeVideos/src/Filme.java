@@ -1,14 +1,22 @@
 
-public class Filme
+public class Filme extends Cadastro
 {
 	protected int numero;
 	protected String tituloFilme;
+	protected String duracao;
+	protected int anoLancamento;
+	protected String formato;
 	protected int qtdCopias;
 	
-	public Filme(int numero, String tituloFilme, int qtdCopias)
+	String[] atoresPrincipais = new String[3];
+
+	public Filme(int numero, String tituloFilme, String duracao, int anoLancamento, String formato, int qtdCopias)
 	{
 		this.numero = numero;
 		this.tituloFilme = tituloFilme;
+		this.duracao = duracao;
+		this.anoLancamento = anoLancamento;
+		this.formato = formato;
 		this.qtdCopias = qtdCopias;
 	}
 
@@ -32,6 +40,36 @@ public class Filme
 		this.tituloFilme = tituloFilme;
 	}
 
+	public String getDuracao()
+	{
+		return duracao;
+	}
+
+	public void setDuracao(String duracao)
+	{
+		this.duracao = duracao;
+	}
+
+	public int getAnoLancamento()
+	{
+		return anoLancamento;
+	}
+
+	public void setAnoLancamento(int anoLancamento)
+	{
+		this.anoLancamento = anoLancamento;
+	}
+
+	public String getFormato()
+	{
+		return formato;
+	}
+
+	public void setFormato(String formato)
+	{
+		this.formato = formato;
+	}
+
 	public int getQtdCopias()
 	{
 		return qtdCopias;
@@ -41,7 +79,21 @@ public class Filme
 	{
 		this.qtdCopias = qtdCopias;
 	}
+
+	public void addAtores(String nomeAtor, int i)
+	{
+		String novoAtor = new String(nomeAtor);
+		atoresPrincipais[i] = novoAtor;
+	}
 	
-	
+	public String toString()
+	{
+		return "\nNúmero: " + numero +
+				"\nTítulo: " + tituloFilme +
+				"\nDuração: " + duracao +
+				"\nAno de lançamento: " + anoLancamento +
+				"\nFormato: " + formato +
+				"\nCópias: " + qtdCopias;
+	}
 	
 }

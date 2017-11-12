@@ -3,17 +3,27 @@ import java.util.ArrayList;
 public class AlugarFilmes
 {
 	Socio socio;
+	String sc;
+	String filme;
 	ArrayList<Filme> filmesAlugados = new ArrayList<>();
 	
-	public AlugarFilmes(Socio socio, Filme tituloFilme)
+	int qtdCopiasAlugadas;
+	
+	public AlugarFilmes(Socio socio, Filme filme)
 	{
 		this.socio = socio;
-		this.filmesAlugados.add(tituloFilme);
+		this.filmesAlugados.add(filme);
+		qtdCopiasAlugadas ++;
 	}
 	
 	public String getNome()
 	{
 		return this.socio.getNome();
+	}
+	
+	public void setNome(String nome)
+	{
+		this.sc = nome;
 	}
 	
 	public String getCpf()
@@ -31,6 +41,11 @@ public class AlugarFilmes
 		this.socio = socio;
 	}
 	
+	public void setTituloFilme(String tituloFilme)
+	{
+		this.filme = tituloFilme;
+	}
+	
 	public ArrayList<Filme> getFilme()
 	{
 		return this.filmesAlugados;
@@ -38,14 +53,29 @@ public class AlugarFilmes
 	
 	public void adicionaFilme(Filme filme)
 	{
-		this.filmesAlugados.add(filme);
+		if(qtdCopiasAlugadas != filme.qtdCopias)
+		{
+			this.filmesAlugados.add(filme);
+		}
+		else
+		{
+			System.out.println("\nFilme indisponível no momento!" + "\n" + "Tente alugar outro.\n"  + "\n");
+		}
 	}
 	
-	public void listaFilmes()
+	public void listaAlugados()
 	{
+		System.out.println("\n------ Filmes alugados ------");
 		for(Filme filme : filmesAlugados)
 		{
-			System.out.println(filme);
+			if(filmesAlugados.equals(null))
+			{
+				System.out.print("\nNão consta nenhum filme alugado." + "\n");
+			}
+			else
+			{
+				System.out.print("\nTítulo: " + filme.getTituloFilme() + "\nAlugado por: " + socio.getNome() + "\n");
+			}
 		}
 	}
 }
