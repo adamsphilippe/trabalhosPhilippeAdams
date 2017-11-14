@@ -5,27 +5,27 @@ public class AppTestes
 
 	public static void main(String[] args)
 	{
-		Socio s1 = new Socio("Louro Jose", "Rua A", 32446787, 12345678, "66922909372", "11/11/2017");
-		Socio s2 = new Socio("Toinha Cacimbão", "Rua B", 34728812, 87654321, "56712309342", "09/11/2017");
+		//Socio s1 = new Socio("Louro Jose", "Rua A", 32446787, 12345678, "66922909372", "11/11/2017");
+		//Socio s2 = new Socio("Toinha Cacimbão", "Rua B", 34728812, 87654321, "56712309342", "09/11/2017");
 		Locadora l1 = new Locadora();
-		/*Socio s1 = new Socio("", "", 0, 0, "", "");
+		Socio s1 = new Socio("", "", 0, 0, "", "");
 		Socio s2 = new Socio("", "", 0, 0, "", "");
 		Socio s3 = new Socio("", "", 0, 0, "", "");
 		Socio s4 = new Socio("", "", 0, 0, "", "");
-		Socio s5 = new Socio("", "", 0, 0, "", "");*/
+		Socio s5 = new Socio("", "", 0, 0, "", "");
 		
 		l1.cadastrarSocio(s1);
 		l1.cadastrarSocio(s2);
 		//l1.buscarSocio("669.229.093-72");
 		//System.out.println(s1);
 		
-		Filme f1 = new Filme(1, "Star Wars", "2h 4m", 1977, "MKV", 5);
-		/*Filme f1 = new Filme(0, "", "", 0, "", 0);
+		//Filme f1 = new Filme(1, "Star Wars", "2h 4m", 1977, "MKV", 5);
+		Filme f1 = new Filme(0, "", "", 0, "", 0);
 		Filme f2 = new Filme(0, "", "", 0, "", 0);
 		Filme f3 = new Filme(0, "", "", 0, "", 0);
 		Filme f4 = new Filme(0, "", "", 0, "", 0);
-		Filme f5 = new Filme(0, "", "", 0, "", 0);*/
-		Filme f2 = new Filme(2, "O Senhor dos Aneis", "2h 30m", 2001, "MKV", 3);
+		Filme f5 = new Filme(0, "", "", 0, "", 0);
+		//Filme f2 = new Filme(2, "O Senhor dos Aneis", "2h 30m", 2001, "MKV", 3);
 		//l1.cadastrarFilme(f1);
 		//l1.cadastrarFilme(f2);
 		//l1. buscarFilme("Star Wars");
@@ -40,7 +40,7 @@ public class AppTestes
 		//a1.listaAlugados();
 		
 		
-		/*int opcao = 0;
+		int opcao = 0;
 		
 		do
 		{
@@ -529,7 +529,7 @@ public class AppTestes
 				
 			}
 			
-		}while(opcao != 7);*/
+		}while(opcao != 7);
 		
 	}
 
