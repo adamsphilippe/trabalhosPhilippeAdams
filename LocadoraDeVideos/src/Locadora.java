@@ -39,16 +39,6 @@ public class Locadora
 		return null;
 	}
 	
-	/*public void atualizarNomeSocio(Socio s, String nome)
-	{
-		s.setNome(nome);
-	}
-	
-	public void atualizarEnderecoSocio(Socio s, String endereco)
-	{
-		s.setEndereco(endereco);
-	}*/
-	
 	
 	public void cadastrarFilme(Filme f)
 	{

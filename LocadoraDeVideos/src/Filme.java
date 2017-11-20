@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Filme extends Cadastro
 {
@@ -8,7 +9,7 @@ public class Filme extends Cadastro
 	protected String formato;
 	protected int qtdCopias;
 	
-	String[] atoresPrincipais = new String[3];
+	ArrayList<String> atoresPrincipais = new ArrayList<>();
 
 	public Filme(int numero, String tituloFilme, String duracao, int anoLancamento, String formato, int qtdCopias)
 	{
@@ -80,10 +81,18 @@ public class Filme extends Cadastro
 		this.qtdCopias = qtdCopias;
 	}
 
-	public void addAtores(String nomeAtor, int i)
+	public void addAtores(String ator)
 	{
-		String novoAtor = new String(nomeAtor);
-		atoresPrincipais[i] = novoAtor;
+		this.atoresPrincipais.add(ator);
+	}
+	
+	
+	
+	public void mostrarAtores()
+	{
+
+		System.out.println(atoresPrincipais.toString());
+
 	}
 	
 	public String toString()
@@ -93,7 +102,7 @@ public class Filme extends Cadastro
 				"\nDuração: " + duracao +
 				"\nAno de lançamento: " + anoLancamento +
 				"\nFormato: " + formato +
-				"\nCópias: " + qtdCopias;
+				"\nCópias: " + qtdCopias +
+				"\nAtores principais:";
 	}
-	
 }
